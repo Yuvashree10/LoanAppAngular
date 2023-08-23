@@ -1,0 +1,75 @@
+<div class="container-fluid ps-md-0">
+    <div class="row g-0">
+      
+      <div class="col-md-8 col-lg-11">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <h3 class="login-heading mb-4">Create An Account</h3>
+  
+                <!-- Sign In Form -->
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                  <div class="form-floating mb-3 form-block">
+                    <div class="form_control_name">
+                        <label>Enter User Name</label>
+                    </div>
+                    <div class="attribute_section">
+                    <input type="text" class="form-control" [(ngModel)]="signUpRequest.name" id="floatingInput" placeholder="Name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"  id="inputEmail4">
+                    
+                   
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required">Name is required</div>
+                     
+                    </div>
+                    
+                   </div>
+                   
+                  </div>
+                  <div class="form-floating mb-3 form-block">
+                    <div class="form_control_name">
+                        <label>Enter Email</label>
+                    </div>
+                    <div class="attribute_section">
+                    <input type="text" class="form-control" [(ngModel)]="signUpRequest.email" id="floatingInput" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  id="inputEmail4">
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                   </div>
+                 
+                  </div>
+                </div>
+                  <div class="form-floating mb-3 form-block">
+                    <div class="form_control_name">
+                        <label>Enter Password</label>
+                    </div>
+                    <div class="attribute_section">
+                    <input type="password" class="form-control"  [(ngModel)]="signUpRequest.password" id="floatingPassword" placeholder="Password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="inputPassword4">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                    
+                  </div>
+  </div>
+                  <!-- <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                    <label class="form-check-label" for="rememberPasswordCheck">
+                      Remember password
+                    </label>
+                  </div> -->
+  <p class="line_space"></p>
+                  <div class="d-grid">
+                    <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Create Account</button>
+                    <div class="text-center">
+                      <a class="small" href="#">Forgot password?</a>
+                    </div>
+                  </div>
+  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>>

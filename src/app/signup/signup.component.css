@@ -1,0 +1,14 @@
+.form_control_name{
+    display: inline-block;
+    width: 33%;
+}
+.attribute_section{
+    display: inline-block;
+    width: 50%;
+}
+.form-block{
+    width: 100%;
+}
+.space{
+    margin-top: 50px;
+}
